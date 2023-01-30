@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Click me</button> 
+
+    <script>
+      const btn = document.getElementById("btn");
+      btn.addEventListener("click", logEventData);
+      btn.removeEventListener("click", logEventData);
+
+      function logEventData(ev) {
+        console.log("clicked");
+        console.log(ev);
+      }
+    </script>
+  </body>
+</html>
