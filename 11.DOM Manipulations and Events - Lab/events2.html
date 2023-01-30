@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="logEventData(event)">Click Me</button>  <!--This is using HTML Attributes! 
+                                            (attributes are pieces of code that the browser will execute)-->
+                                                        <!--therefore BRACKETS in logEventData(event)!-->
+    <script>
+            function logEventData(event) {
+            console.log('clicked');
+            console.log(event);
+}
+    </script>
+
+    <!--or by using DOM Element Properties-->
+
+    <button id="btn">Click me</button> 
+ 
+    <script>
+      const btn = document.getElementById("btn");
+      //note the  the lack of BRACKETS in logEventData(event)
+      btn.onclick = logEventData; //Note that this is property, not attribute
+                                   // we write reference to the function, not execution 
+
+      function logEventData(ev) {
+        console.log("clicked");
+        console.log(ev);
+      }
+    </script>
+
+
+    
+</body>
+</html>
