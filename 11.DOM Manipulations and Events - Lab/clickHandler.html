@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+   <button>0</button>
+
+    <script>
+      const btn = document.querySelector('button');  
+      btn.addEventListener('click', increment)        //This is Dom Event Handler - prefered method
+      btn.addEventListener('click', second)  //btn.removeEventListener('click', increment)   
+                                                //method to remove eventListener
+      
+      function increment() {
+        const newValue = Number(btn.textContent) + 1;
+        btn.textContent = newValue;
+        console.log('1');
+      }
+
+      function second() {
+        console.log('2');
+      }
+    </script>
+  </body>
+</html>
