@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+   <button>0</button>
+   <button>0</button>
+   <button>0</button>
+   <button>0</button>
+   <button>0</button>
+   <button>0</button>
+
+    <script>
+   
+    document.querySelectorAll('button').forEach( b => b.addEventListener('click', increment))
+      
+      function increment(event) {
+        const newValue = Number(event.target.textContent) + 1;
+        event.target.textContent = newValue;       
+      }
+
+    </script>
+  </body>
+</html>
