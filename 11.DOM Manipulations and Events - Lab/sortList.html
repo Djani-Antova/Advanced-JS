@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Manipulation Demo</title>
+  </head>
+  <body>
+    <button onclick="sort()">Sort List</button>
+    <ul>
+      <li>7</li>
+      <li>14</li>
+      <li>11</li>
+      <li>13</li>
+      <li>1</li>
+    </ul>
+
+    <script>
+      function sort() {
+        let ul = document.querySelector("ul");
+        let items = [...ul.children];
+
+        items.sort((a, b) => Number(a.textContent) - Number(b.textContent));
+
+        for (let item of items) {
+          ul.appendChild(item);
+        }
+      }
+    </script>
+  </body>
+</html>
