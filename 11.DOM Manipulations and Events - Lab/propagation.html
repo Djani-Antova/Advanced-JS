@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ 
+    <title>Propagation</title>
+</head>
+<body>
+    <div>
+        <article>
+            <button>Click Me</button>
+
+        </article>
+    </div>
+    <script>
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', onClick, true);
+        btn.parentElement.addEventListener('click', onClick, true);
+        btn.parentElement.parentElement.addEventListener('click', onClick, true);
+
+        function onClick(event) {
+            //console.log('clicked', event.target);         // event target points to the event creator
+            console.log('clicked', event.currentTarget); //currentTarget refers to all listeners
+        }
+    </script>
+    
+</body>
+</html>
